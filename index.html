@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="./productos.js"></script>
+    <script defer src="./app.js"></script>
+
+    <title>Naturalia</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-naturalia"> NATURALIA ALMACEN</a>
+
+            <span class="nav-right">
+
+                <span class="current-user">
+                    <h3 class="login-abrir">log in</h3>
+                </span>
+
+                <span>
+                    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span
+                            id="contadorCarrito">0</span></button>
+                </span>
+
+            </span>
+        </nav>
+    </header>
+
+    <div class="modal-login-contenedor">
+        <div class="modal-login">
+            <button class="cerrar-login"> X </button>
+            <form action="">
+                <h2>Log in </h2>
+                <label for="user">usuario</label>
+                <input type="text" name="user" id="user" placeholder="ingrese su usuario"> <br>
+                <label for="email">e-mail</label>
+                <input type="email" name="email" id="email" placeholder="ingrese su e-mail"> <br>
+                <label for="password"> contraseña</label>
+                <input type="password" name="password" id="pass" placeholder="ingrese su contraseña"> <br> <br>
+                <button type="submit" id="inicio-sesion" onclick="login(), agregarNombre()" >iniciar sesion</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <img src="img/logo2.png" alt="logo de Naturalia" width="50%">
+
+        <div id="quienes-somos">
+            <h2> Quienes somos</h2>
+            <p class="banner-text"> somos un mercado natural, brindamos amplia variedad de productos organicos, aptos
+                para veganos y
+                vegetarianos. Nos encargamos de que puedas comer rico y saludable sin moverte de tu casa.
+            </p> <br>
+            <a href="productos.html" id="ir-productos"> ir a comprar</a>
+        </div>
+    </div>
+
+    <section class="productos-slider">
+        <h2 class="productos-title"> Nuestros Productos </h2>
+
+        <div class="multiple-items">
+            <img src="img/aceite-coco.png" alt="" width="300px">
+            <img src="img/crudda-queso.png" alt="" width="300px">
+            <img src="img/nitro-tea.png" alt="" width="300px">
+            <img src="img/haulani.png" alt="" width="300px">
+            <img src="img/alfajor.png" alt="" width="300px">
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div>
+            <p class="footer-contact">
+            <h3>Contacto</h3>
+            Calle 1234, Almagro. CABA <br>
+            +54 11 3580-0794
+            </p>
+        </div>
+        <div>
+            <p class="footer-horarios">
+            <h3>Horarios</h3>
+            Lunes a viernes de 11 a 18 hs. <br>
+            Sábados de 9 a 14hs
+            </p>
+        </div>
+        <div>
+            <p class="footer-social">
+            <h3> Seguinos en las redes</h3> <br>
+            @naturaliamarket
+            </p>
+        </div>
+        <div id="footer-naturalia">
+            <h3>Naturalia</h3>
+        </div>
+    </footer>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
