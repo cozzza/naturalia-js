@@ -1,0 +1,30 @@
+@media (max-width: 1200px)  {
+
+body{
+    width: 100vw;
+}
+header{
+    width: 100vw !important;
+}
+
+#buscador{
+    width: auto !important;
+}
+
+footer{
+    width: 100vw !important;
+}
+
+.multiple-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.multiple-items img{
+    width: 20%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+}
+

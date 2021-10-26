@@ -1,10 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100;
+    box-sizing: border-box;
 
+}
 .current-user:hover{
 cursor: pointer;
 color: #ad5869;
@@ -105,8 +111,8 @@ color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 18rem;
-    padding: 10px;
+    max-width: 12rem;
+    padding: 2%;
     margin-bottom: 20px;
     border: 1px solid rgba(0,0,0,.125);
     background-color: rgb(255, 255, 255);
@@ -163,7 +169,7 @@ color: rgb(0, 0, 0);
     min-width: 500px;
     padding: 20px;
     margin-top: 2%;
-    margin-left: 65%;
+    margin-left: 52%;
 }
 .modal-active .modal-carrito {
     margin-top: 10px;
@@ -220,9 +226,9 @@ color: rgb(0, 0, 0);
 }
 
 #buscador{
-width: 250px;
+width: 200px;
 height: 50px;
-margin-left: 82%;
+margin-left: 78%;
 border: 1px solid rgba(0,0,0,.125);
 background-color: rgb(255, 255, 255);
 padding: 1%;
@@ -272,11 +278,13 @@ padding: 1%;
 .multiple-items {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
+    padding-top: 2%;
     align-content: center;
 }
 
 .multiple-items img{
+    width: 250px;
     border-radius: 10px;
 }
 .modal-container {
@@ -299,7 +307,6 @@ padding: 1%;
   opacity: 0;
   transition: all 0.5 ease-in;
 }
-
 .modal-active {
   visibility: visible !important;
   opacity: 1 !important; 
@@ -309,7 +316,6 @@ padding: 1%;
    margin: 35%;
    border-radius: 10px;
 }
-
 .modal-login-contenedor{
     position: fixed;
     top: 0;
@@ -322,15 +328,56 @@ padding: 1%;
 }
 
 .modal-login{
-    height: fit-content;
-    width: fit-content;
-    background-color: #be7181;
+    position: relative;
+    background-color: white;
     padding: 3%;
     padding-top: 5%;
     padding-bottom: 5%;
     display: block;
-    position: relative;
-    /* visibility: hidden;
-    opacity: 0; */
+    width: 250px;
     transition: all 0.5 ease-in;
+    margin-left: 40%;
+    margin-top: 15%;
+}
+
+.modal-login .cerrar-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(0, 3, 14);
+    border: none;
+    background-color: white;
+}
+
+button#incio-sesion{
+    background-color: #ad5869;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    width: 160px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#inicio-sesion:hover{
+    cursor: pointer;
+}
+.cerrar-login:hover{
+    cursor: pointer;
+}
+form{
+    color: #be7181;
+    font-weight: bold;
+}
+form h2{
+    padding-bottom: 20px;
+}
+
+form span{
+    padding-bottom: 100px;
 }
