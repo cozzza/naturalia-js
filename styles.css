@@ -1,94 +1,141 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100;
-    box-sizing: border-box;
-
-}
-.current-user:hover{
-cursor: pointer;
-color: #ad5869;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a.nav-naturalia{
-    font-size: 35px;
-}
-a:hover{
-    color: #ad5869;
-}
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(250, 219, 219);
+    background-color: #b1c5db;
 }
 .producto img {
     width: 100%;
     margin-bottom: 10px;
 }
-header {
-    padding: 3%;
-    margin-bottom: 20px;
-    background-color: rgb(230, 136, 156);
+
+nav{
+    background-color: #c7a7cf;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-header nav{
+#footer{
     display: flex;
     justify-content: space-between;
+    padding: 2%;
     align-items: center;
+    background-color: #c7a7cf;
+}
+
+#footer-naturalia{
+    padding-bottom: 47px;
+   ;
+}
+
+#sections{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
+    color: mediumslateblue;
+}
+.nav-link:hover{
+    color:#FFDE59;
+}
+
+.titles{
+    text-align: center;
+    padding-bottom: 2%;
+}
+#quienes-somos{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    max-width: 100vw;
+    align-items: center;
+}
+#newsletter{
+    background-color: #8faac7;
+    padding: 5%;
+    text-align: center;
+    font-size: 28px;
+}
+.btn{
+    background-color: mediumslateblue;
     color: white;
-}
-
-.nav-right{
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-    font-size: 24px;
-    align-items: center;
-}
-
-h1 {
-    color: rgb(230, 136, 156);
-    text-transform: uppercase;
+    font-size: 18px;
     font-weight: 700;
-    font-size: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    width: 160px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
+.btn:hover{
+    background-color:#f7e5a0;
+    color: rgb(0, 0, 0);
+}
+#product-menu{
+    margin-top: 2%;
+    background-color: #f7e5a0;
+    padding: 2%;
+    border-radius: 30px;
+}
+
+#product-menu a{
+text-decoration: none;
+color: purple;
+font-size: 20px;
+padding: 5px;
+}
+
+#product-menu a:hover{
+    color:mediumslateblue;
+}
+
+#checkout a{
+    text-decoration: none;
+}
+
+#contadorCarrito{
+    text-align: center;
+    font-size: 30px;
+}
+/*********************************/
 #boton-carrito {
     border: none;
-    background-color: rgb(230, 136, 156);
     color: rgb(0, 0, 0);
     font-size: 30px;
     transition: all .3s;
 }
 #boton-carrito:hover {
     cursor: pointer;
-    color: #ad5869;
-    background-color: rgb(230, 136, 156);
+    color: mediumslateblue;
 }
 #boton-carrito:focus {
     outline: none;
 }
 
-.current-user{
-    color: black;
+#nuestros-productos{
+    background-color: #7b9ec4;
+    padding-top: 2%;
+    border-radius: 20px;
+}
+
+#productos-section{
+    background-color: rgb(190, 187, 214);
+    border-radius: 10px;
 }
 
 #contenedor-productos {
     max-width: 85%;
-    margin: 60px auto;
+    margin: 2% auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #aecfa7;
+    padding: 5%;
+    border-radius: 10px;
 }
 
 #carrito-contenedor{
@@ -97,21 +144,14 @@ h1 {
 }
 
 p {
-    line-height: 1.8;
+    text-align: center;
 }
 
-#productos-title{
-font-size: 24px;
-text-align: center;
-padding: 2%;
-color: rgb(0, 0, 0);
-
-}
 .producto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 12rem;
+    max-width: 14rem;
     padding: 2%;
     margin-bottom: 20px;
     border: 1px solid rgba(0,0,0,.125);
@@ -136,7 +176,7 @@ color: rgb(0, 0, 0);
     height: 40px;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .boton-agregar:hover {
     cursor: pointer;
@@ -155,11 +195,6 @@ color: rgb(0, 0, 0);
     transition: all .5s;
     opacity: 0;
     visibility: hidden;
-}
-
-.modal-active {
-    opacity: 1;
-    visibility: visible;
 }
 
 .modal-carrito {
@@ -205,10 +240,10 @@ color: rgb(0, 0, 0);
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .productoEnCarrito:hover {
-    border: 2px solid #ad5869a2;
+    border-bottom: 1px solid #ad5869a2;
+    border-left: 1px solid #ad5869a2;
 }
 
 .boton-eliminar {
@@ -226,97 +261,35 @@ color: rgb(0, 0, 0);
 }
 
 #buscador{
-width: 200px;
+width: 250px;
 height: 50px;
-margin-left: 78%;
+margin-left: 45%;
 border: 1px solid rgba(0,0,0,.125);
 background-color: rgb(255, 255, 255);
 padding: 1%;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(230, 136, 156);
-    font-size: 18px;
-}
 
-.footer div{
-    margin: 3%;
-}
-
-.banner {
-    padding-top: 5%;
-    padding-bottom: 2%;
-    display: flex;
-    align-items: center;
-}
-  
-.banner div {
-    padding: 5%;
-    width: 50%;
-}
-  
-.banner .banner-text {
-    font-size: 20px;
-}
-  
-.banner a {
-    text-decoration: none;
-    background-color: #E6889C;
-    padding: 2%;
-}
-  
-.productos-title {
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 2%;
-    text-align: center;
-}
-  
-.multiple-items {
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 3%;
-    padding-top: 2%;
-    align-content: center;
-}
-
-.multiple-items img{
-    width: 250px;
-    border-radius: 10px;
-}
-.modal-container {
-  height: 100vh;
-  width: 100vw;
-  background-color: #979495;
-  position: fixed;
-  display: flex;
-}
-.modal {
-  height: fit-content;
-  width: fit-content;
-  background-color: #be7181;
-  padding: 3%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  display: block;
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5 ease-in;
-}
 .modal-active {
   visibility: visible !important;
   opacity: 1 !important; 
 }
 
-#ir-productos{
-   margin: 35%;
-   border-radius: 10px;
+#datos-facturacion{
+    display: flex;
 }
-.modal-login-contenedor{
+
+#checkout-modal{
+    position: relative;
+    background-color: white;
+    max-width: 600px;
+    min-width: 500px;
+    padding: 30px;
+    margin-top: 10%;
+    margin-left: 28vw;
+}
+
+#checkout-container{
     position: fixed;
     top: 0;
     width: 100vw;
@@ -327,20 +300,15 @@ padding: 1%;
     visibility: hidden;
 }
 
-.modal-login{
-    position: relative;
-    background-color: white;
-    padding: 3%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: block;
-    width: 250px;
-    transition: all 0.5 ease-in;
-    margin-left: 40%;
-    margin-top: 15%;
+#datos-facturacion span{
+    margin: 30px;
 }
 
-.modal-login .cerrar-login {
+#realizar-compra{
+    margin-left: 33%;
+}
+
+#cerrar-compra{
     position: absolute;
     top: 15px;
     right: 15px;
@@ -348,36 +316,4 @@ padding: 1%;
     color: rgb(0, 3, 14);
     border: none;
     background-color: white;
-}
-
-button#incio-sesion{
-    background-color: #ad5869;
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 5px;
-    border: none;
-    border-radius: 10px;
-    width: 160px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
-#inicio-sesion:hover{
-    cursor: pointer;
-}
-.cerrar-login:hover{
-    cursor: pointer;
-}
-form{
-    color: #be7181;
-    font-weight: bold;
-}
-form h2{
-    padding-bottom: 20px;
-}
-
-form span{
-    padding-bottom: 100px;
 }

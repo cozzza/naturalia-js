@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="mediaquery.css">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="./productos.js"></script>
     <script defer src="./app.js"></script>
 
     <title>Naturalia</title>
@@ -22,74 +26,73 @@
 
 <body>
     <header class="header">
-        <nav class="nav">
-            <a href="index.html" class="nav-naturalia"> NATURALIA ALMACEN</a>
+        <nav class="container-fluid navbar">
+            <div>
+                <img class="navbar-brand w-25 rounded-3 logo" src="img/logo-nat.png" alt="">
+            </div>
 
-            <span class="nav-right">
+            <div id="sections">
+                <a href="#quienes-somos" class="nav-link">
+                    <h2>quienes somos</h2>
+                </a>
+                <a href="#" class="nav-link">
+                    <h2>recetas</h2>
+                </a>
+                <a href="#footer" class="nav-link">
+                    <h2>contacto</h2>
+                </a>
 
-                <span class="current-user">
-                    <h3 class="login-abrir">log in</h3>
-                </span>
+                <i class="fas fa-shopping-cart nav-link" id="boton-carrito"></i>
+                <span id="contadorCarrito">0</span></button>
 
-                <span>
-                    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span
-                            id="contadorCarrito">0</span></button>
-                </span>
-            </span>
+            </div>
         </nav>
     </header>
 
-    <div class="modal-login-contenedor">
-        <div class="modal-login">
-            <button class="cerrar-login"> X </button>
-            <form action="">
-                <h2>Log in </h2>
-                <span>
-                    <label for="user">usuario</label>
-                    <input type="text" name="user" id="user" placeholder="ingrese su usuario"> <br>
-                </span>
-                <span>
-                    <label for="email">e-mail</label>
-                    <input type="email" name="email" id="email" placeholder="ingrese su e-mail"> <br>
-                </span>
-                <span>
-                    <label for="password"> contraseña</label>
-                    <input type="password" name="password" id="pass" placeholder="ingrese su contraseña"> <br> <br>
-                </span>
+    <section id="quienes-somos" class="banner container-fluid">
+        <img src="img/nat-banner.png" alt="logo de Naturalia">
 
-                <button id="inicio-sesion" onclick="login(), agregarNombre()">iniciar sesion</button>
-            </form>
-        </div>
-    </div>
-
-
-    <div class="banner">
-        <img src="img/logo2.png" alt="logo de Naturalia" width="50%">
-
-        <div id="quienes-somos">
-            <h2> Quienes somos</h2>
+        <div>
+            <h2 class="titles"> Quienes somos</h2>
             <p class="banner-text"> somos un mercado natural, brindamos amplia variedad de productos organicos, aptos
-                para veganos y
-                vegetarianos. Nos encargamos de que puedas comer rico y saludable sin moverte de tu casa.
-            </p> <br>
-            <a href="productos.html" id="ir-productos"> ir a comprar</a>
+                para veganos y vegetarianos. Nos encargamos de que puedas comer rico y saludable sin moverte de tu casa.
+            </p>
         </div>
-    </div>
+    </section>
 
-    <section class="productos-slider">
-        <h2 class="productos-title"> Nuestros Productos </h2>
+    <section id="productos-section" class="container-fluid">
+        
+        <div id="nuestros-productos" class="titles">
+            <h3>Nuestros productos</h3>
+        </div>
 
-        <div class="multiple-items">
-            <img src="img/aceite-coco.png" alt="" width="300px">
-            <img src="img/crudda-queso.png" alt="" width="300px">
-            <img src="img/nitro-tea.png" alt="" width="300px">
-            <img src="img/haulani.png" alt="" width="300px">
+        <section id="product-menu" class="container-fluid">
+            <a href="#"> Ver todo</a>
+            <span> | </span>
+            <a href="#" id="bebidas">Bebidas</a>
+            <span> | </span>
+            <a href="#" id="almacen">Almacén</a>
+            <span> |</span>
+            <a href="#" id="heladera">Heladera</a>
+           
+            <input type="text" id="buscador" placeholder="Buscar un producto">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </section>
+
+        <div id="contenedor-productos">
 
         </div>
 
     </section>
 
-    <footer class="footer">
+    <section id="newsletter" class="container-fluid">
+        <label for="email"> Subscribite y recibí ofertas exclusivas </label>
+        <input type="email" name="email" id="newsletter-email" placeholder="ingresa tu e-mail">
+        <button id="btn-newsletter" class="btn btn-primary" type="submit">Subscribirme</button>
+    </section>
+
+
+    <footer id="footer">
         <div>
             <p class="footer-contact">
             <h3>Contacto</h3>
@@ -117,14 +120,65 @@
 
     <div class="modal-contenedor">
         <div class="modal-carrito">
-            <h3>Carrito</h3>
-            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
+            <h>Carrito</h3>
+                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                <div id="contenedor-carrito">
 
-            </div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+                </div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+
+                <button id="checkout" class="btn"> Checkout </button>
+
         </div>
     </div>
+
+    <div id="checkout-container">
+        <div id="checkout-modal">
+            <button id="cerrar-compra"><i class="fas fa-times-circle"></i></button>
+            <h3 class="titles">Finalizar compra</h3>
+    
+            <h4>Datos de facturación y envio</h4>
+    
+            <form id="datos-facturacion" action="">
+                <span id="datos-personales">
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="ingrese su nombre" required>
+                    <br>
+                    <label for="apellido"> Apellido </label>
+                    <input type="text" name="apellido" id="apellido" placeholder="ingrese su nombre" required> <br>
+    
+                    <label for="email"> E-mail </label>
+                    <input type="email" name="email" id="email" placeholder="ingrese su e-mail" required> <br>
+    
+                    <label for="dni"> DNI </label>
+                    <input type="number" name="dni" id="dni" placeholder="ingrese su DNI" required> <br>
+    
+                </span>
+    
+                <span id="datos-domicilio">
+                    <label for="telefono"> Teléfono </label>
+                    <input type="number" name="telefono" id="telefono" placeholder="ingrese su telefono" required> <br>
+    
+                    <label for="domicilio"> Domicilio </label>
+                    <input type="domicilio" name="domicilio" id="domicilio" placeholder="Nombre de la calle" required>
+                    <br>
+    
+                    <label for="localidad"> Localidad </label>
+                    <input type="localidad" name="localidad" id="localidad" placeholder="ingrese su localidad" required>
+                    <br>
+    
+                    <label for="provincia"> Provincia </label>
+                    <input type="provincia" name="provincia" id="provincia" placeholder="ingrese la provincia" required>
+                </span> <br>
+            </form>
+            
+            <button class="btn" id="realizar-compra"> Realizar compra </button>
+
+            </span>
+        </div>
+    </div>
+   
+
 </body>
 
 </html>
