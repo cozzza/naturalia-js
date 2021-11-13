@@ -159,9 +159,21 @@ $("#checkout").click(function () {
 
 $("#realizar-compra").click(function () {
   checkContainer.removeClass("modal-active");
-
+  $(".succes-container").addClass("modal-active")
+  vaciarCarrito();
 });
 
 $("#cerrar-compra").click(function(){
   checkContainer.removeClass("modal-active");
+});
+
+
+const vaciarCarrito = () => {
+  contenedorCarrito.innerHTML = " "
+  contadorCarrito.innerHTML = "0"
+
+}
+
+$("#cerrar-succes").click (function(){
+  $(".succes-container").removeClass("modal-active")
 })

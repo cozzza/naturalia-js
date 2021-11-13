@@ -1,6 +1,5 @@
 
 body{
-    font-family: 'Roboto', sans-serif;
     background-color: #b1c5db;
 }
 .producto img {
@@ -165,7 +164,7 @@ p {
 }
 
 .boton-agregar {
-    background-color: #ad5869;
+    background-color: mediumslateblue;
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -180,7 +179,8 @@ p {
 }
 .boton-agregar:hover {
     cursor: pointer;
-    background-color: rgb(230, 136, 156);
+    background-color: #f7e5a0;
+    color: black;
 }
 .boton-agregar:focus {
     outline: none;
@@ -195,6 +195,7 @@ p {
     transition: all .5s;
     opacity: 0;
     visibility: hidden;
+    overflow-y: scroll;
 }
 
 .modal-carrito {
@@ -269,7 +270,6 @@ background-color: rgb(255, 255, 255);
 padding: 1%;
 }
 
-
 .modal-active {
   visibility: visible !important;
   opacity: 1 !important; 
@@ -306,6 +306,7 @@ padding: 1%;
 
 #realizar-compra{
     margin-left: 33%;
+    margin-top: 50px;
 }
 
 #cerrar-compra{
@@ -316,4 +317,55 @@ padding: 1%;
     color: rgb(0, 3, 14);
     border: none;
     background-color: white;
+}
+
+#check{
+    background-color: #8ac47b;
+    border-radius: 50px;
+    border: 2px solid rgb(51, 116, 38);
+    margin: 5%;
+}
+
+.succes-container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000075;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    scroll-margin: 100vh;
+}
+
+.succes-modal{
+    position: relative;
+    background-color: white;
+    max-width: 600px;
+    min-width: 500px;
+    padding: 30px;
+    margin-top: 10%;
+    margin-left: 28vw;
+    text-align: center;
+}
+
+#cerrar-succes{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(0, 3, 14);
+    border: none;
+    background-color: white;
+}
+
+#navbar{
+    height: 25px;
+}
+
+#forma-pago{
+    display: inline;
+    position: fixed;
+    padding-top: 230px;
+    margin-top: 20px;
 }
